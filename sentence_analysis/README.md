@@ -23,3 +23,21 @@ Lower case: 26
 Punctuation: 1
 Total chars: 28
 ```
+
+
+sentence = input("enter a sentence")
+count1 = 0
+count2 = 0
+for i in sentence:
+    if(i.islower()):
+        count1=count1+1
+    elif(i.isupper()):
+        count2=count2+1
+
+
+print("Upper case: {}".format(float(count2)))
+print("Lower case: {}".format(float(count1)))
+print("Punctuation: {}".format(float(len(sentence) - sentence.count(" ") - float(count1) - float(count2))))
+print("Total chars: {}".format(float(len(sentence) - sentence.count(" "))))
+
+
